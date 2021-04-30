@@ -1,0 +1,24 @@
+<!--
+URL : (http://)  127.0.0.1/form.html
+방문자도 직접 글을 작성할 수 있게 만들면서, 사용자들이 웹을 통해 잣니의 콘텐츠를 동록
+ -->
+<!DOCTYPE html>
+<html>
+ <body>
+   <form action="form.php" method="post">
+     <p><input type="text" name="title" placeholder="Title"></p>
+     <p><textarea name="description" placeholder="Description"></textarea></p>
+     <p><input type="submit"></p>
+   </form>
+   <!--
+   form 태그 : 웹에서 입력한 정보를 URL 파라미터로 만들어냄
+   -->
+   <!--
+   html상에 어떤 값을 입력해주는 기능들(<input>, <textarea> 태그 등)을 통해 입력된 값들을 다른 서버로 전송해줄 수 있는 기능 태그가  <form></form> 태그 이다.
+  그리고 <form>에서 데이터를 보낼 곳의 주소위치를 적어주는게 action=" "속성이고,
+  데이터를 전송하는 방식("url창에 파라미터와 그 값을 다 뜨게 해서 보낼지, or 숨겨서 은밀히 보낼지")을 지정해주는게 method 속성이다.
+  method속성은 디폴트값으로 "get"이 되어있으며, post방식으로 은밀히 데이터를 보내고자하면 반드시 method="post"로 <form>태그 내에 명시해줘야 한다.(안하면 자동으로 get방식이 됨).
+  <form>태그의 데이터전송방식은 GET method와 POST method 2가지 인데, '북마크' 같은 기능을 구현할 땐 GET방식이 적절하고(조금더빠르고간결함), 일반 웹서비스에서 데이터 생성,읽기, 등을 구현할 땐 POST방식(은밀하고 보안적임)을 써야 한다.
+  -->
+ </body>
+</html>
